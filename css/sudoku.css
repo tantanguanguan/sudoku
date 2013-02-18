@@ -1,0 +1,35 @@
+/* General CSS */
+html, body, div, input, textarea {
+ font-family: Verdana,Tahoma,Segoe,sans-serif;
+ font-size: 14px;
+}
+body {color: #DDD; margin: 0 auto; padding: 0; }
+a {text-decoration: none; }	
+.clear { clear: both; }
+
+/* Global CSS*/
+.content {width: 960px; margin: 0 auto; padding: 20px 0;}
+.content:after {clear: both;}
+
+/* Header area */
+.header {background: #FFF; color: #AAA;}
+.header span {font-size: 30px; }
+.header .navbar:after {clear: both;}
+.header .navbar a {float: left; color: #555;}
+.header .navbar ul.nav {display: block; list-style: none; float: left;}
+.header .navbar ul.nav li {cursor: pointer;}
+.header .navbar ul.nav li:hover {color: #0099FF;}
+
+
+/* Body */
+#board {width: 480px; position: relative;}
+.body {background: #444;}
+.numpad { border-radius:10px; border:3px solid #CCC; width: 20px; height: 20px; font-weight: bold; cursor: pointer; padding: 10px 5px 10px 15px; margin: 2px 0;}
+.numpad:hover {border-color: #0099FF}
+.group {width: 150px; margin: 0 5px 0 0; float: left;}
+
+hr {float: left; width: 450px; margin: 2px;}
+#verticalLine-left {border-left: 2px solid #CCC; height: 460px; left: 150px; position: absolute;}
+#verticalLine-right  {border-left: 2px solid #CCC; height: 460px; left: 305px; position: absolute;}
+
+.error {color: red;}

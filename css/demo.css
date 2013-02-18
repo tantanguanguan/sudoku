@@ -1,0 +1,14 @@
+/* keyboard - demo CSS */
+html, body, div, input, textarea {
+ font-family: Verdana,Tahoma,Segoe,sans-serif;
+ font-size: 14px;
+}
+
+body { background: #333; color: #ddd; height: 98%; margin: 0 auto; padding: 0; }
+a:link { color: #9fcdff; text-decoration: none; }
+a:hover { color: #fff; }
+a:visited,a:active { color: #53a5ff; }
+
+.clear { clear: both; }
+
+.numpad { border-radius:10px; width: 20px; height: 20px; cursor: pointer; padding: 10px 8px 10px 15px}

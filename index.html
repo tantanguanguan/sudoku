@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sudoku</title>
+
+		<!-- jQuery & jQuery UI + theme (required) -->
+		<link href="http://code.jquery.com/ui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+
+		<!-- keyboard widget css & script (required) -->
+		<link href="css/keyboard.css" rel="stylesheet">
+		<link href="css/sudoku.css" rel="stylesheet">
+		<script src="js/jquery.keyboard.js"></script>
+		<script src="js/sudoku.js"></script>
+		
+		<!-- keyboard extensions (optional) -->		
+		<script src="js/jquery.keyboard.extension-typing.js"></script>
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="navbar">
+				<div class="content">
+					<a href="/sudoku">
+						<span>Sudoku world!</span>
+					</a>
+					<ul class="nav">
+						<li id="soduku-solve">Start Solving</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="content">
+				<form id="formSudoku" method="post" action="" enctype="application/x-www-form-urlencoded">
+					<div id="board">
+						<div class="group">
+							<input id="p11" class="numpad" type="text">
+							<input id="p12" class="numpad" type="text">
+							<input id="p13" class="numpad" type="text">
+							<input id="p21" class="numpad" type="text">
+							<input id="p22" class="numpad" type="text">
+							<input id="p23" class="numpad" type="text">
+							<input id="p31" class="numpad" type="text">
+							<input id="p32" class="numpad" type="text">
+							<input id="p33" class="numpad" type="text">
+						</div>
+						<div class="group">
+							<input id="p14" class="numpad" type="text">
+							<input id="p15" class="numpad" type="text">
+							<input id="p16" class="numpad" type="text">
+							<input id="p24" class="numpad" type="text">
+							<input id="p25" class="numpad" type="text">
+							<input id="p26" class="numpad" type="text">
+							<input id="p34" class="numpad" type="text">
+							<input id="p35" class="numpad" type="text">
+							<input id="p36" class="numpad" type="text">
+						</div>
+						<div class="group">
+							<input id="p17" class="numpad" type="text">
+							<input id="p18" class="numpad" type="text">
+							<input id="p19" class="numpad" type="text">
+							<input id="p27" class="numpad" type="text">
+							<input id="p28" class="numpad" type="text">
+							<input id="p29" class="numpad" type="text">
+							<input id="p37" class="numpad" type="text">
+							<input id="p38" class="numpad" type="text">
+							<input id="p39" class="numpad" type="text">
+						</div>
+						<div id="verticalLine-left"></div>
+						<hr></hr>
+						<div class="group">
+							<input id="p41" class="numpad" type="text">
+							<input id="p42" class="numpad" type="text">
+							<input id="p43" class="numpad" type="text">
+							<input id="p51" class="numpad" type="text">
+							<input id="p52" class="numpad" type="text">
+							<input id="p53" class="numpad" type="text">
+							<input id="p61" class="numpad" type="text">
+							<input id="p62" class="numpad" type="text">
+							<input id="p63" class="numpad" type="text">
+						</div>
+							<div class="group">
+							<input id="p44" class="numpad" type="text">
+							<input id="p45" class="numpad" type="text">
+							<input id="p46" class="numpad" type="text">
+							<input id="p54" class="numpad" type="text">
+							<input id="p55" class="numpad" type="text">
+							<input id="p56" class="numpad" type="text">
+							<input id="p64" class="numpad" type="text">
+							<input id="p65" class="numpad" type="text">
+							<input id="p66" class="numpad" type="text">
+						</div>
+						<div class="group">
+							<input id="p47" class="numpad" type="text">
+							<input id="p48" class="numpad" type="text">
+							<input id="p49" class="numpad" type="text">
+							<input id="p57" class="numpad" type="text">
+							<input id="p58" class="numpad" type="text">
+							<input id="p59" class="numpad" type="text">
+							<input id="p67" class="numpad" type="text">
+							<input id="p68" class="numpad" type="text">
+							<input id="p69" class="numpad" type="text">
+						</div>
+						<div id="verticalLine-right"></div>
+						<hr></hr>
+						<div class="group">
+							<input id="p71" class="numpad" type="text">
+							<input id="p72" class="numpad" type="text">
+							<input id="p73" class="numpad" type="text">
+							<input id="p81" class="numpad" type="text">
+							<input id="p82" class="numpad" type="text">
+							<input id="p83" class="numpad" type="text">
+							<input id="p91" class="numpad" type="text">
+							<input id="p92" class="numpad" type="text">
+							<input id="p93" class="numpad" type="text">
+						</div>
+						<div class="group">
+							<input id="p74" class="numpad" type="text">
+							<input id="p75" class="numpad" type="text">
+							<input id="p76" class="numpad" type="text">
+							<input id="p84" class="numpad" type="text">
+							<input id="p85" class="numpad" type="text">
+							<input id="p86" class="numpad" type="text">
+							<input id="p94" class="numpad" type="text">
+							<input id="p95" class="numpad" type="text">
+							<input id="p96" class="numpad" type="text">
+						</div>
+						<div class="group">
+							<input id="p77" class="numpad" type="text">
+							<input id="p78" class="numpad" type="text">
+							<input id="p79" class="numpad" type="text">
+							<input id="p87" class="numpad" type="text">
+							<input id="p88" class="numpad" type="text">
+							<input id="p89" class="numpad" type="text">
+							<input id="p97" class="numpad" type="text">
+							<input id="p98" class="numpad" type="text">
+							<input id="p99" class="numpad" type="text">
+						</div>
+					</div>
+				</form>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="footer">
+
+		</div>
+	</body>
+</html>
